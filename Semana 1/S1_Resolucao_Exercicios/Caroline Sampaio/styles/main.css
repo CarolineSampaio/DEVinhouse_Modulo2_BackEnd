@@ -1,0 +1,55 @@
+body {
+    background: linear-gradient(to right, #cddfed, #cddfed);
+}
+
+.main-title {
+    text-align: center;
+}
+
+.algoritmos-lista {
+    margin: 0 auto;
+    width: 80%;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+
+    text-align: center;
+}
+
+.algoritmo-item {
+    background-color: #FFF;
+    transition: background-color 1s ease 0s;
+    flex-basis: 40%;
+    height: 100px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 1);
+}
+
+.algoritmo-item:hover {
+    animation: pulse 2s infinite;  
+}
+
+@keyframes pulse {
+	0% {
+		transform: scale(0.95);
+		box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7);
+	}
+
+	70% {
+		transform: scale(1);
+		box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
+	}
+
+	100% {
+		transform: scale(0.95);
+		box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+	}
+}
