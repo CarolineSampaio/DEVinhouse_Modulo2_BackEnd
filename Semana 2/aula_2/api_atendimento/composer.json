@@ -1,0 +1,17 @@
+{
+    "name": "carol/api_atendimento",
+    "autoload": {
+        "psr-4": {
+            "Carol\\ApiAtendimento\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Caroline Sampaio",
+            "email": "caroline_08022@hotmail.com"
+        }
+    ],
+    "require": {
+        "phpmailer/phpmailer": "^6.8"
+    }
+}
