@@ -1,0 +1,29 @@
+[
+  {
+    "id": 1696633902,
+    "name": "Mi Teleferico - La Paz",
+    "contact": "info@miteleferico.bo",
+    "openingHours": "6:00 - 22:00",
+    "description": "Transporte urbano com teleféricos",
+    "latitude": -16.4913611,
+    "longitude": -68.1450278
+  },
+  {
+    "id": 1696633945,
+    "name": "Salar de Uyuni",
+    "contact": "info@salardeuyuni.com",
+    "openingHours": "Aberto o ano todo",
+    "description": "O Salar de Uyuni é o maior deserto de sal do mundo, localizado no sudoeste da Bolívia. É um destino incrível para turistas, conhecido por suas vastas planícies brancas que se estendem até onde os olhos podem ver.",
+    "latitude": -20.133,
+    "longitude": -67.489
+  },
+  {
+    "id": 1696633959,
+    "name": "Cidade de Potosí",
+    "contact": "info@potosi.travel",
+    "openingHours": "Horário comercial",
+    "description": "Potosí é uma cidade nas montanhas do sul da Bolívia, famosa por suas minas de prata históricas. É uma cidade rica em patrimônio cultural e oferece aos visitantes uma visão fascinante da história colonial boliviana.",
+    "latitude": -19.59,
+    "longitude": -65.756
+  }
+]

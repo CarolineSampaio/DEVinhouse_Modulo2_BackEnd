@@ -1,0 +1,29 @@
+[
+  {
+    "id": 1696810211,
+    "name": "Machu Picchu",
+    "contact": "info@machupicchu.pe",
+    "openingHours": "Aberto o ano todo",
+    "description": "Machu Picchu é uma antiga cidade inca situada nas montanhas dos Andes. É uma maravilha arquitetônica e um Patrimônio Mundial da UNESCO. As ruínas oferecem vistas espetaculares e uma rica história.",
+    "latitude": -13.163141,
+    "longitude": -72.545784
+  },
+  {
+    "id": 1696810216,
+    "name": "Lago Titicaca",
+    "contact": "info@lagotiticaca.pe",
+    "openingHours": "Aberto o ano todo",
+    "description": "O Lago Titicaca é o lago navegável mais alto do mundo e é conhecido por suas águas cristalinas e cenários deslumbrantes. As ilhas flutuantes dos Uros são uma atração única no lago.",
+    "latitude": -15.925056,
+    "longitude": -69.335767
+  },
+  {
+    "id": 1696810222,
+    "name": "Cidade de Cusco",
+    "contact": "info@cusco.pe",
+    "openingHours": "Horário comercial",
+    "description": "Cusco é uma cidade peruana no alto dos Andes. É famosa por sua herança inca e colonial. A cidade possui muitos sítios arqueológicos, praças históricas e é o ponto de partida para Machu Picchu.",
+    "latitude": -13.518333,
+    "longitude": -71.978056
+  }
+]

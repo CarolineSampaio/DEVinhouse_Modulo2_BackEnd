@@ -1,0 +1,29 @@
+[
+  {
+    "id": 1696809802,
+    "name": "Deserto do Atacama",
+    "contact": "info@atacamachile.com",
+    "openingHours": "Aberto o ano todo",
+    "description": "O Deserto do Atacama, localizado no norte do Chile, é o deserto mais árido do mundo. É famoso por sua paisagem lunar, gêiseres, lagunas coloridas e céu noturno espetacular para observação de estrelas.",
+    "latitude": -22.908333,
+    "longitude": -68.199722
+  },
+  {
+    "id": 1696809809,
+    "name": "Santiago",
+    "contact": "info@santiagochile.travel",
+    "openingHours": "Horário comercial",
+    "description": "Santiago, a capital do Chile, é uma cidade moderna cercada pelos picos cobertos de neve da Cordilheira dos Andes. É conhecida por sua rica herança cultural, gastronomia e vinícolas nas proximidades.",
+    "latitude": -33.448889,
+    "longitude": -70.669265
+  },
+  {
+    "id": 1696809815,
+    "name": "Torres del Paine",
+    "contact": "info@torresdelpaine.cl",
+    "openingHours": "Aberto o ano todo",
+    "description": "O Parque Nacional Torres del Paine, no sul do Chile, é um paraíso para os amantes da natureza. Oferece trilhas deslumbrantes, lagos de cor turquesa, geleiras e uma abundância de vida selvagem.",
+    "latitude": -51.259167,
+    "longitude": -72.345833
+  }
+]

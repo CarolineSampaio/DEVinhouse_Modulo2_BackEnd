@@ -1,0 +1,29 @@
+[
+  {
+    "id": 1696809910,
+    "name": "Cidade do Assunção",
+    "contact": "info@assuncaoparaguay.com",
+    "openingHours": "Horário comercial",
+    "description": "Assunção é a capital do Paraguai e a maior cidade do país. Oferece uma mistura de história colonial, cultura indígena e modernidade. Possui museus, praças e uma vida noturna agitada.",
+    "latitude": -25.263739,
+    "longitude": -57.575926
+  },
+  {
+    "id": 1696809916,
+    "name": "Ruínas de Jesús de Tavarangue",
+    "contact": "info@ruinasparaguay.com",
+    "openingHours": "Aberto o ano todo",
+    "description": "As Ruínas de Jesús de Tavarangue são um sítio arqueológico no Paraguai, com ruínas de uma missão jesuíta do século XVIII. É um local fascinante para quem se interessa pela história colonial.",
+    "latitude": -27.151717,
+    "longitude": -55.800074
+  },
+  {
+    "id": 1696809922,
+    "name": "Salto del Monday",
+    "contact": "info@saltodelmonday.com",
+    "openingHours": "Aberto o ano todo",
+    "description": "Salto del Monday é uma linda cachoeira localizada perto de Ciudad del Este. Oferece trilhas na selva, belas paisagens e é um local popular para os amantes da natureza.",
+    "latitude": -25.515478,
+    "longitude": -54.633617
+  }
+]
