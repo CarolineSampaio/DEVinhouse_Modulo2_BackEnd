@@ -1,0 +1,29 @@
+[
+  {
+    "id": 1696801235,
+    "name": "Cristo Redentor",
+    "contact": "info@cristoredentor.com",
+    "openingHours": "9:00 - 19:00",
+    "description": "O Cristo Redentor é uma estátua do Cristo Redentor localizada no topo do morro do Corcovado, no Rio de Janeiro. É um dos ícones mais reconhecíveis do Brasil e do mundo.",
+    "latitude": -22.9519,
+    "longitude": -43.2106
+  },
+  {
+    "id": 1696801251,
+    "name": "Fernando de Noronha",
+    "contact": "info@fernandodenoronha.com",
+    "openingHours": "Aberto o ano todo",
+    "description": "Fernando de Noronha é um arquipélago no nordeste do Brasil conhecido por suas praias de água cristalina, vida marinha exuberante e atividades de mergulho incríveis.",
+    "latitude": -3.8494,
+    "longitude": -32.4257
+  },
+  {
+    "id": 1696801268,
+    "name": "Cataratas do Iguaçu",
+    "contact": "info@iguacufalls.com",
+    "openingHours": "8:00 - 18:00",
+    "description": "As Cataratas do Iguaçu são uma das maiores e mais impressionantes quedas d&#39;água do mundo, localizadas na fronteira entre o Brasil e a Argentina.",
+    "latitude": -25.6953,
+    "longitude": -54.4367
+  }
+]

@@ -1,0 +1,29 @@
+[
+  {
+    "id": 1696810105,
+    "name": "Quito",
+    "contact": "info@quito.ec",
+    "openingHours": "Horário comercial",
+    "description": "Quito é a capital do Equador, localizada na cordilheira dos Andes. Possui uma rica herança colonial, com igrejas e edifícios históricos. A cidade também oferece vistas deslumbrantes das montanhas circundantes.",
+    "latitude": -0.229498,
+    "longitude": -78.524277
+  },
+  {
+    "id": 1696810110,
+    "name": "Amazon Rainforest",
+    "contact": "info@amazon.ec",
+    "openingHours": "Aberto o ano todo",
+    "description": "A Floresta Amazônica do Equador é uma das partes mais biodiversas da Amazônia. Ela é o lar de uma variedade de vida selvagem e plantas exóticas. Você pode explorar trilhas, rios e aprender sobre a cultura indígena.",
+    "latitude": -1.421955,
+    "longitude": -76.787384
+  },
+  {
+    "id": 1696810118,
+    "name": "Galápagos Islands",
+    "contact": "info@galapagos.ec",
+    "openingHours": "Aberto o ano todo",
+    "description": "As Ilhas Galápagos são famosas por sua biodiversidade única. Elas desempenharam um papel crucial na teoria da evolução de Charles Darwin. Você pode explorar várias ilhas, cada uma com sua própria vida selvagem fascinante.",
+    "latitude": -0.826758,
+    "longitude": -91.136718
+  }
+]

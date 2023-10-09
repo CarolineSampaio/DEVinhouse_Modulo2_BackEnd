@@ -1,0 +1,29 @@
+[
+  {
+    "id": 1696810290,
+    "name": "Punta del Este",
+    "contact": "info@puntadeleste.uy",
+    "openingHours": "Aberto o ano todo",
+    "description": "Punta del Este é um dos destinos de praia mais famosos do Uruguai. É conhecido por suas praias incríveis, vida noturna animada e a icônica escultura La Mano na Playa Brava.",
+    "latitude": -34.940833,
+    "longitude": -54.942778
+  },
+  {
+    "id": 1696810295,
+    "name": "Montevidéu",
+    "contact": "info@montevideo.uy",
+    "openingHours": "Horário comercial",
+    "description": "Montevidéu é a capital do Uruguai e é uma cidade vibrante com uma rica herança cultural. Possui museus, parques, mercados e uma bela orla.",
+    "latitude": -34.901112,
+    "longitude": -56.187223
+  },
+  {
+    "id": 1696810301,
+    "name": "Colonia del Sacramento",
+    "contact": "info@coloniasacramento.uy",
+    "openingHours": "Aberto o ano todo",
+    "description": "Colonia del Sacramento é uma cidade histórica no Uruguai. Suas ruas de paralelepípedos e edifícios coloniais fazem você se sentir como se estivesse voltando no tempo.",
+    "latitude": -34.479167,
+    "longitude": -57.839167
+  }
+]

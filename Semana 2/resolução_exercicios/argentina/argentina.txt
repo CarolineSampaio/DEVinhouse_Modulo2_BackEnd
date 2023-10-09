@@ -1,0 +1,29 @@
+[
+  {
+    "id": 1696809677,
+    "name": "Cataratas do Iguaçu",
+    "contact": "info@iguazuargentina.com",
+    "openingHours": "Aberto o ano todo",
+    "description": "As Cataratas do Iguaçu são uma das maravilhas naturais do mundo, localizadas na fronteira entre a Argentina e o Brasil. É um espetáculo de quedas d&#39;água que se estendem por quilômetros, cercadas por uma exuberante selva tropical.",
+    "latitude": -25.690833,
+    "longitude": -54.440833
+  },
+  {
+    "id": 1696809694,
+    "name": "Buenos Aires",
+    "contact": "info@buenosaires.travel",
+    "openingHours": "Horário comercial",
+    "description": "Buenos Aires, a capital da Argentina, é uma cidade vibrante e cheia de cultura. Conhecida por seu tango envolvente, arquitetura europeia e deliciosa comida, Buenos Aires é um destino imperdível para os amantes da cultura e da história.",
+    "latitude": -34.611778,
+    "longitude": -58.417309
+  },
+  {
+    "id": 1696809700,
+    "name": "Mendoza",
+    "contact": "info@mendozaargentina.com",
+    "openingHours": "Horário comercial",
+    "description": "Mendoza é famosa por suas vinícolas e vinhos incríveis. Localizada aos pés da majestosa Cordilheira dos Andes, a região de Mendoza oferece belas paisagens e degustações de vinhos inesquecíveis.",
+    "latitude": -32.889458,
+    "longitude": -68.845838
+  }
+]
