@@ -17,6 +17,11 @@ if ($method === 'POST') {
     $fila = json_decode(file_get_contents(ARQUIVO_FILA_ATENDIMENTO));
 
     // pegar o primeiro item do array de fila e  exclui a pessoa do array de fila para que não seja chamado por outro atendente;
+    if (count($fila) === 0) {
+        http_response_code(204);
+        exit;
+    }
+
     $primeiroItem = array_shift($fila);
 
     // salvar o array fila no arquivo filaAtendimento.txt
@@ -38,5 +43,5 @@ if ($method === 'POST') {
     }
 
     http_response_code(201);
-    echo json_encode(['message' => 'Atendimento criado com sucesso!']);
+    echo json_encode(['current' => $primeiroItem]);
 }
