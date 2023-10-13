@@ -1,0 +1,20 @@
+[
+    {
+        "nome": "Joao",
+        "idade": null,
+        "cpf": "359.892.590-50",
+        "salario": 2000
+    },
+    {
+        "nome": "Joao",
+        "idade": null,
+        "cpf": "359.892.590-50",
+        "salario": 2000
+    },
+    {
+        "nome": "Douglas",
+        "idade": null,
+        "cpf": "191.685.930-11",
+        "salario": "2000"
+    }
+]
