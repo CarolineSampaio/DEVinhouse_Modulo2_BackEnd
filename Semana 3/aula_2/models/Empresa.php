@@ -16,9 +16,35 @@ class Empresa {
         $this->cnpj = $cnpj;
     }
 
+    public function setNome($nome) {
+        $this->nome = $nome;
+    }
+
+    public function getNome() {
+        return $this->nome;
+    }
+
+    public function setCNPJ($cnpj) {
+        $this->cnpj = $cnpj;
+    }
+
+    public function getCnpj() {
+        return $this->cnpj;
+    }
+
+    public function setEndereço($endereço) {
+        $this->endereço = $endereço;
+    }
+
+    public function getEndereço() {
+        return $this->endereço;
+    }
+
+
     public function contratar(Funcionario $funcionario) {
 
         $data = [
+            'id' => $funcionario->getId(),
             'nome' => $funcionario->getNome(),
             'idade' => $funcionario->getIdade(),
             'cpf' => $funcionario->getCpf(),
@@ -31,7 +57,13 @@ class Empresa {
     }
 
     public function demitir($id) {
-        //implementação
+        $allData = readFileContent('files/funcionarios.txt');
+
+        $filteredData =  array_values(array_filter($allData, function ($item) use ($id) {
+            return $item->id !== $id;
+        }));
+
+        saveFileContent('files/funcionarios.txt', $filteredData);
     }
 
     public function listarFuncionarios() {
@@ -40,6 +72,14 @@ class Empresa {
     }
 
     public function aumentarSalario(Funcionario $funcionario, $novoSalario) {
-        //implementação
+        $data = readFileContent('files/funcionarios.txt');
+        $filteredData =  array_values(array_filter($data, function ($item) use ($funcionario) {
+            return $item->id === $funcionario->getId();
+        }));
+
+        $filteredData[0]->salario = $novoSalario;
+
+        array_push($data, $filteredData[0]);
+        saveFileContent('files/funcionarios.txt', $data);
     }
 }

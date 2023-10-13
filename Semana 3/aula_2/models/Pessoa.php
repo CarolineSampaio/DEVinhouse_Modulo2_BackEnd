@@ -3,12 +3,14 @@
 // 2 - criar os atributos da classe
 // 3 - criar os métodos
 
-class Pessoa {
+abstract class Pessoa {
+    private $id;
     private $nome;
     private $idade;
     private $cpf;
 
     public function __construct($nome, $cpf) {
+        $this->id = uniqid();
         $this->nome = $nome;
         $this->cpf = $cpf;
     }
@@ -32,5 +34,9 @@ class Pessoa {
     }
     public function setCpf($cpf) {
         $this->cpf = $cpf;
+    }
+
+    public function getId() {
+        return $this->id;
     }
 }

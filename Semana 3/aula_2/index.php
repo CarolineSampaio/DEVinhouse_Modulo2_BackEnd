@@ -12,4 +12,12 @@ $funcionario2 = new Funcionario('Douglas', '191.685.930-11', '2000');
 $empresa->contratar($funcionario1);
 $empresa->contratar($funcionario2);
 
+echo $funcionario1->getId();
+echo $funcionario2->getId();
+
+$empresa->aumentarSalario($funcionario2, 4000);
+$empresa->aumentarSalario($funcionario1, 3000);
+
+$empresa->demitir($funcionario1->getId());
+
 debug($empresa->listarFuncionarios());
