@@ -1,0 +1,11 @@
+[
+  {
+    "id": "652c878e7fd1f",
+    "name": "Esse lugar é um [EDITADO PELO ADMIN]",
+    "email": "caroline@email.com",
+    "stars": 2,
+    "status": "APROVADO",
+    "date": "15/10/2023 21:45",
+    "place_id": "652dcb340edcb"
+  }
+]

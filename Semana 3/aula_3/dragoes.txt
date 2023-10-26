@@ -1,0 +1,23 @@
+[
+  {
+    "id": "652741d94ecbb",
+    "name": "Dragao de ouro",
+    "damage": 200,
+    "defese": 20000,
+    "life": 1000
+  },
+  {
+    "id": "6527432055955",
+    "name": "Dragao de ouro",
+    "damage": 200,
+    "defese": 20000,
+    "life": 1000
+  },
+  {
+    "id": "65274354679fc",
+    "name": "Dragao de ouro",
+    "damage": 200,
+    "defese": 20000,
+    "life": 1000
+  }
+]
