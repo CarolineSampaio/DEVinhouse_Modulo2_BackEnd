@@ -1,0 +1,1 @@
+Introdução a banco de dados, instalação docker e dbeaver, criando e executando um banco de dados.
