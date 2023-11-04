@@ -12,6 +12,18 @@ class BreedController {
 
         $breed = new Breed($name);
 
-        $breed->insert();
+        $result = $breed->insert();
+
+        if ($result['success'] === true) {
+            response(["message" => "Cadastrado com sucesso"], 201);
+        } else {
+            responseError("Houve um erro ao inserir a raça.", 400);
+        }
+    }
+
+    public function listAll() {
+        $breed = new Breed();
+        $breeds = $breed->findMany();
+        response($breeds, 200);
     }
 }
