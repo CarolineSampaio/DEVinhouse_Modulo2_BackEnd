@@ -1,6 +1,7 @@
 <?php
 require_once '../utils.php';
 require_once '../models/Breed.php';
+require_once '../models/BreedDAO.php';
 
 class BreedController {
     public function createOne() {
@@ -12,7 +13,8 @@ class BreedController {
 
         $breed = new Breed($name);
 
-        $result = $breed->insert();
+        $breedDAO = new BreedDAO();
+        $result = $breedDAO->insert($breed);
 
         if ($result['success'] === true) {
             response(["message" => "Cadastrado com sucesso"], 201);
@@ -22,8 +24,8 @@ class BreedController {
     }
 
     public function listAll() {
-        $breed = new Breed();
-        $breeds = $breed->findMany();
+        $breedDAO = new BreedDAO();
+        $breeds = $breedDAO->findMany();
         response($breeds, 200);
     }
 }

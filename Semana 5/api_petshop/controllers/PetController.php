@@ -1,6 +1,7 @@
 <?php
 require_once '../utils.php';
 require_once '../models/Pet.php';
+require_once '../models/PetDAO.php';
 
 class PetController {
     public function createOne() {
@@ -29,7 +30,8 @@ class PetController {
         if ($weight) $pet->setWeight($weight);
         if ($size) $pet->setSize($size);
 
-        $result = $pet->insert();
+        $petDAO = new PetDAO();
+        $result = $petDAO->insert($pet);
 
         if ($result['success'] === true) {
             response(["message" => "Pet cadastrado com sucesso."], 201);
@@ -39,8 +41,8 @@ class PetController {
     }
 
     public function listAll() {
-        $pet = new Pet();
-        $pets = $pet->findMany();
+        $petDAO = new PetDAO();
+        $pets = $petDAO->findMany();
         response($pets, 200);
     }
 
@@ -49,8 +51,8 @@ class PetController {
 
         if (!$id) responseError('O id inserido é inválido. ', 400);
 
-        $pet = new Pet();
-        $result = $pet->findOne($id);
+        $petDAO = new PetDAO();
+        $result = $petDAO->findOne($id);
 
         if (!$result) responseError('Pet não encontrado. ', 404);
         response($result, 200);
@@ -61,12 +63,12 @@ class PetController {
 
         if (!$id) responseError('O id inserido é inválido. ', 400);
 
-        $pet = new Pet();
-        $petExists = $pet->findOne($id);
+        $petDAO = new PetDAO();
+        $petExists = $petDAO->findOne($id);
 
         if (!$petExists) responseError('Pet não encontrado. ', 404);
 
-        $result = $pet->deleteOne($id);
+        $result = $petDAO->deleteOne($id);
 
         if ($result['success'] === true) {
             response(["message" => "Pet deletado com sucesso."], 204);
@@ -94,9 +96,9 @@ class PetController {
             responseError('O tamanho inserido é inválido. ', 400);
         }
 
-        $pet = new Pet();
+        $petDAO = new PetDAO();
 
-        $result = $pet->updateOne($id, $body);
+        $result = $petDAO->updateOne($id, $body);
 
 
         if ($result['success'] === true) {
