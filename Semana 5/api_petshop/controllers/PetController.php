@@ -43,4 +43,66 @@ class PetController {
         $pets = $pet->findMany();
         response($pets, 200);
     }
+
+    public function listOne() {
+        $id = sanitizeInput($_GET, 'id', FILTER_VALIDATE_INT, false);
+
+        if (!$id) responseError('O id inserido é inválido. ', 400);
+
+        $pet = new Pet();
+        $result = $pet->findOne($id);
+
+        if (!$result) responseError('Pet não encontrado. ', 404);
+        response($result, 200);
+    }
+
+    public function deleteOne() {
+        $id = sanitizeInput($_GET, 'id', FILTER_VALIDATE_INT, false);
+
+        if (!$id) responseError('O id inserido é inválido. ', 400);
+
+        $pet = new Pet();
+        $petExists = $pet->findOne($id);
+
+        if (!$petExists) responseError('Pet não encontrado. ', 404);
+
+        $result = $pet->deleteOne($id);
+
+        if ($result['success'] === true) {
+            response(["message" => "Pet deletado com sucesso."], 204);
+        } else {
+            responseError("Houve um erro ao deletar o pet.", 400);
+        }
+    }
+
+    public function updateOne() {
+        $id = sanitizeInput($_GET, 'id', FILTER_VALIDATE_INT, false);
+        $body = getBody();
+
+        if (!$id) responseError('ID ausente ou inválido. ', 400);
+
+        if (isset($body->name) && empty($body->name)) responseError('O nome do pet é obrigatório. ', 400);
+
+        if (isset($body->race_id) && empty($body->race_id)) responseError('O id da raça é obrigatório. ', 400);
+
+        if (
+            isset($body->size) && !($body->size === 'PEQUENO' ||
+                $body->size === 'MEDIO' ||
+                $body->size === 'GRANDE' ||
+                $body->size === 'GIGANTE')
+        ) {
+            responseError('O tamanho inserido é inválido. ', 400);
+        }
+
+        $pet = new Pet();
+
+        $result = $pet->updateOne($id, $body);
+
+
+        if ($result['success'] === true) {
+            response([], 200);
+        } else {
+            responseError("Não foi possível atualizar o item.", 400);
+        }
+    }
 }
