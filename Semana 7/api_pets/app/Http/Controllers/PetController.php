@@ -7,10 +7,35 @@ use App\Models\Pet;
 use Illuminate\Http\Request;
 
 class PetController extends Controller {
-    public function index() {
+    public function index(Request $request) {
         try {
-            $pets = Pet::all();
-            return $pets;
+            // Get básico
+            // $pets = Pet::all();
+            // return $pets;
+
+
+            $params = $request->query();
+
+            $pets = Pet::query();
+
+            // Select * from pets
+
+            if ($request->has('age') && !empty($params['age'])) {
+                $pets->where('age', $params['age']);
+            }
+
+            if ($request->has('name') && !empty($params['name'])) {
+                $pets->where('name', 'ilike', '%' . $params['name'] . '%');
+            }
+
+            /*
+            if($request->has('size') && !empty($params['size'])) {
+                $pets->whereIn('size', $params['size']);
+            }
+            */
+
+
+            return $pets->orderBy('name')->get();
         } catch (\Throwable $th) {
             return;
         }
