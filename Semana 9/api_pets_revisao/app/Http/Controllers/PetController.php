@@ -19,7 +19,20 @@ class PetController extends Controller {
             $filters = $request->query();
 
             // inicializa uma query
-            $pets = Pet::query();
+            // $pets = Pet::query();
+
+            $pets = Pet::query()
+                ->select(
+                    'id as id_pet',
+                    'pets.name as pet_name',
+                    'pets.breed_id',
+                    'pets.specie_id'
+                )
+                #->with('breed') // traz todas as colunas
+                ->with(['breed' => function ($query) {
+                    $query->select('name', 'id');
+                }])
+                ->with('specie');
 
             // verifica se filtro
             if ($request->has('name') && !empty($filters['name'])) {

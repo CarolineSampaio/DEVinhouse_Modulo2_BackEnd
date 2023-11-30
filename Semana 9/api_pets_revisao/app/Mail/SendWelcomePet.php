@@ -5,6 +5,7 @@ namespace App\Mail;
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
+use Illuminate\Mail\Mailables\Attachment;
 use Illuminate\Mail\Mailables\Content;
 use Illuminate\Mail\Mailables\Envelope;
 use Illuminate\Queue\SerializesModels;
@@ -48,6 +49,10 @@ class SendWelcomePet extends Mailable {
      * @return array<int, \Illuminate\Mail\Mailables\Attachment>
      */
     public function attachments(): array {
-        return [];
+        return [
+            Attachment::fromPath((public_path('enel.pdf')))
+                ->as('Sua conta chegou.pdf')
+                ->withMime('application/pdf'),
+        ];
     }
 }
