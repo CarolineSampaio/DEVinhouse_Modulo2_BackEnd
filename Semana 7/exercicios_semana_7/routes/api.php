@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AchievementController;
 use App\Http\Controllers\AssetController;
 use App\Http\Controllers\AvaliationController;
 use App\Http\Controllers\CategoryController;
@@ -39,3 +40,8 @@ Route::get('/categories', [CategoryController::class, 'index']);
 Route::get('/categories/{id}', [CategoryController::class, 'show']);
 Route::put('/categories/{id}', [CategoryController::class, 'update']);
 Route::delete('/categories/{id}', [CategoryController::class, 'destroy']);
+
+Route::get('achievements', [AchievementController::class, 'index']);
+Route::post('achievements', [AchievementController::class, 'store']);
+Route::put('/achievements/{id}', [AchievementController::class, 'update']);
+Route::delete('/achievements/{id}', [AchievementController::class, 'destroy']);
