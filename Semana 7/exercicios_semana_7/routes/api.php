@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AssetController;
 use App\Http\Controllers\AvaliationController;
+use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\MarkerController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ProductMarkerController;
@@ -32,3 +33,9 @@ Route::post('assets', [AssetController::class, 'store']);
 Route::get('assets/{id}', [AssetController::class, 'show']);
 Route::delete('assets/{id}', [AssetController::class, 'destroy']);
 Route::put('assets/{id}', [AssetController::class, 'update']);
+
+Route::post('/categories', [CategoryController::class, 'store']);
+Route::get('/categories', [CategoryController::class, 'index']);
+Route::get('/categories/{id}', [CategoryController::class, 'show']);
+Route::put('/categories/{id}', [CategoryController::class, 'update']);
+Route::delete('/categories/{id}', [CategoryController::class, 'destroy']);
