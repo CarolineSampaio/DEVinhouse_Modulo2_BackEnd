@@ -6,6 +6,7 @@ namespace Database\Seeders;
 use Illuminate\Database\Seeder;
 use App\Models\Gender as GenderModel;
 use App\Models\User as UserModel;
+use App\Models\Instrument as InstrumentModel;
 
 class DatabaseSeeder extends Seeder
 {
@@ -22,6 +23,11 @@ class DatabaseSeeder extends Seeder
         if(!GenderModel::count())
         {
             $this->call([GenderSeeder::class]);
+        }
+
+        if(!InstrumentModel::count())
+        {
+            $this->call([InstrumentSeeder::class]);
         }
     }
 }
