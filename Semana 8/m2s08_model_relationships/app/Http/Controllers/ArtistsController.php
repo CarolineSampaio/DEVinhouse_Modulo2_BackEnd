@@ -16,8 +16,7 @@ class ArtistsController extends Controller
     {
         try {
             $artists = ArtistModel::with(['instrument'])->get();
-            $message = $artists->count()." ".($artists->count() === 1 ? 'artista encontrado' : 'artistas encontrados')." com sucesso.";
-            return $this->response($artists, $message);
+            return $this->response($artists, $this->message($artists, 'artista', 'encontrado'));
         } catch (\Exception $e) {
             return $this->error($e->getMessage());
         }
@@ -50,7 +49,7 @@ class ArtistsController extends Controller
                 $this->setInstrument($request->input('favorite_instrument'), $artist);
             }
 
-            return $this->response($artist, "Artista $artist->name cadatrado com sucesso.");
+            return $this->response($artist, $this->message($artist,'artista','cadastrado'));
 
         } catch (\Exception $e) {
             return $this->error($e->getMessage());
@@ -63,7 +62,7 @@ class ArtistsController extends Controller
             $artist = ArtistModel::with(['instrument', 'genders'])->find($id);
             return empty($artist)
                 ? $this->error('Artista não encontrado', Response::HTTP_NOT_FOUND)
-                : $this->response($artist, "Artista $artist->name encontrado com sucesso");
+                : $this->response($artist, $this->message($artist,'artista','encontrado'));
         } catch (\Exception $e) {
             return $this->error($e->getMessage());
         }
