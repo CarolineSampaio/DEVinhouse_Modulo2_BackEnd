@@ -19,3 +19,10 @@ Route::delete('/markers/{id}', [MarkerController::class, 'destroy']);
 Route::post('/product_markers', [ProductMarkerController::class, 'store']);
 Route::get('/product_markers', [ProductMarkerController::class, 'index']);
 Route::delete('/product_markers/{id}', [ProductMarkerController::class, 'destroy']);
+
+
+Route::post('/avaliation', [AvaliationController::class, 'store']);
+Route::get('/avaliation', [AvaliationController::class, 'index']);
+Route::get('/avaliation/{id}', [AvaliationController::class, 'show']);
+Route::put('/avaliation/{id}', [AvaliationController::class, 'update']);
+Route::delete('/avaliation/{id}', [AvaliationController::class, 'destroy']);
