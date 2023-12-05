@@ -91,4 +91,21 @@ class PetController extends Controller {
             return $this->error($exception->getMessage(), Response::HTTP_BAD_REQUEST);
         }
     }
+
+    public function destroy($id) {
+        try {
+            $pet = Pet::find($id);
+
+            if (!$pet) {
+                return $this->error('Animal não encontrado!', Response::HTTP_NOT_FOUND);
+            }
+
+
+            $pet->delete();
+
+            return $this->response('', Response::HTTP_NO_CONTENT);
+        } catch (\Exception $exception) {
+            return $this->error($exception->getMessage(), Response::HTTP_INTERNAL_SERVER_ERROR);
+        }
+    }
 }

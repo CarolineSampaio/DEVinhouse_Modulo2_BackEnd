@@ -12,10 +12,11 @@ Route::get('breeds', [BreedController::class, 'index']);
 
 Route::post('species', [SpecieController::class, 'store']);
 Route::get('species', [SpecieController::class, 'index']);
-
+Route::delete('species/{id}', [SpecieController::class, 'destroy']);
 
 Route::post('pets', [PetController::class, 'store']);
 Route::get('pets', [PetController::class, 'index']);
+Route::delete('pets/{id}', [PetController::class, 'destroy']);
 
 Route::get('pets/export', [PetsReportController::class, 'export']);
 
