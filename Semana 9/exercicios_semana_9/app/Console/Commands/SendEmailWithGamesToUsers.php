@@ -30,6 +30,7 @@ class SendEmailWithGamesToUsers extends Command {
         $products = Product::query()
             ->inRandomOrder()
             ->take(10)
+            ->whereBetween('price',  [20, 100])  // ex03
             ->get();
 
         Mail::to('caroline_sampaio@estudante.sesisenai.org.br', 'Caroline Sampaio')
