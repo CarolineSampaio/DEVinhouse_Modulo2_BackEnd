@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Mail\SendWelcomePet;
+use App\Models\People;
 use App\Models\Pet;
 use App\Traits\HttpResponses;
 use Illuminate\Http\Request;
@@ -71,13 +72,19 @@ class PetController extends Controller {
                 'weight' => 'numeric',
                 'size' => 'required|string|in:SMALL,MEDIUM,LARGE,EXTRA_LARGE', // melhorar validacao para enum
                 'breed_id' => 'required|int',
-                'specie_id' => 'required|int'
+                'specie_id' => 'required|int',
+                'client_id' => 'int'
             ]);
 
             $pet = Pet::create($data);
 
-            Mail::to('caroline_sampaio@estudante.sesisenai.org.br', 'Caroline Sampaio')
-                ->send(new SendWelcomePet($pet->name, 'Caroline Sampaio'));
+            if (!empty($pet->client_id)) {
+
+                $people = People::find($pet->client_id);
+
+                Mail::to($people->email, $people->name)
+                    ->send(new SendWelcomePet($pet->name, 'Henrique Douglas'));
+            }
 
             return $pet;
         } catch (\Exception $exception) {
