@@ -6,6 +6,7 @@ use App\Http\Controllers\PetController;
 use App\Http\Controllers\PetsReportController;
 use App\Http\Controllers\ProfessionalController;
 use App\Http\Controllers\SpecieController;
+use App\Http\Controllers\VaccineController;
 use Illuminate\Support\Facades\Route;
 
 Route::post('breeds', [BreedController::class, 'store']);
@@ -26,3 +27,5 @@ Route::get('clients', [ClientController::class, 'index']);
 
 Route::post('professionals', [ProfessionalController::class, 'store']);
 Route::get('professionals', [ProfessionalController::class, 'index']);
+
+Route::post('vaccines', [VaccineController::class, 'store']);

@@ -24,7 +24,7 @@ class PetController extends Controller {
 
             $pets = Pet::query()
                 ->select(
-                    'id as id_pet',
+                    'id',
                     'pets.name as pet_name',
                     'pets.breed_id',
                     'pets.specie_id'
@@ -33,6 +33,7 @@ class PetController extends Controller {
                 ->with(['breed' => function ($query) {
                     $query->select('name', 'id');
                 }])
+                ->with('vaccines')
                 ->with('specie');
 
             // verifica se filtro
