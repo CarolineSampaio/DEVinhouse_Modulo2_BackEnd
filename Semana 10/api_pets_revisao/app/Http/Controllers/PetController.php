@@ -33,7 +33,7 @@ class PetController extends Controller {
                 ->with(['breed' => function ($query) {
                     $query->select('name', 'id');
                 }])
-                ->with('vaccines')
+                ->with('vaccines.professional.people')
                 ->with('specie');
 
             // verifica se filtro

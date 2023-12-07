@@ -9,4 +9,8 @@ class Vaccine extends Model {
     use HasFactory;
 
     protected $fillable = ['professional_id', 'pet_id', 'dose', 'name'];
+
+    public function professional() {
+        return $this->HasOne(Professional::class, 'id', 'professional_id');
+    }
 }
