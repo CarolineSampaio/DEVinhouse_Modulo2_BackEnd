@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Profile;
 use App\Models\User;
 use App\Traits\HttpResponses;
 use Illuminate\Http\Request;
@@ -10,6 +11,40 @@ use Symfony\Component\HttpFoundation\Response;
 
 class AuthController extends Controller {
     use HttpResponses;
+
+    private $permissions = [
+        'ADMIN' => [
+            'create-races',
+            'get-races',
+            'create-species',
+            'get-species',
+            'delete-species',
+            'create-pets',
+            'get-pets',
+            'delete-pets',
+            'create-profissionals',
+            'get-profissionals'
+        ],
+        'RECEPCIONISTA' => [
+            'create-pets',
+            'get-pets',
+            'delete-pets',
+            'export-pet-pets',
+            'create-clients',
+            'get-clients'
+        ],
+        'VETERINARIO' => [
+            'create-races',
+            'get-races',
+            'create-species',
+            'get-species',
+            'delete-species',
+            'create-pets',
+            'get-pets',
+            'delete-pets',
+            'create-vaccines'
+        ]
+    ];
 
     public function store(Request $request) {
         try {
@@ -27,7 +62,12 @@ class AuthController extends Controller {
             }
 
             $request->user()->tokens()->delete();
-            $token = $request->user()->createToken('authToken');
+
+            $profile = Profile::find($request->user()->profile_id);
+
+            $permissionsUser =  $this->permissions[$profile->name];
+
+            $token = $request->user()->createToken('simple', $permissionsUser);
 
             return $this->response('Autorizado', Response::HTTP_OK, [
                 'token' => $token->plainTextToken,
