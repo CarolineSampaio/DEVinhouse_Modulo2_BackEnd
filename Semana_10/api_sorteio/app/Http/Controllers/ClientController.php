@@ -71,4 +71,14 @@ class ClientController extends Controller {
             return $this->error($exception->getMessage(), Response::HTTP_BAD_REQUEST);
         }
     }
+
+    public function destroy($id) {
+        $client = Client::find($id);
+
+        if (!$client) return $this->error('Cliente não encontrado', Response::HTTP_NOT_FOUND);
+
+        $client->delete();
+
+        return $this->error('', Response::HTTP_NO_CONTENT);
+    }
 }
