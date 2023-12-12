@@ -3,6 +3,7 @@
 namespace App\Console;
 
 use App\Console\Commands\SendBestGameRated;
+use App\Console\Commands\SendEmailWithGamesTerror;
 use App\Console\Commands\SendEmailWithGamesToUsers;
 use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Foundation\Console\Kernel as ConsoleKernel;
@@ -13,7 +14,8 @@ class Kernel extends ConsoleKernel {
      */
     protected $commands = [
         SendEmailWithGamesToUsers::class,
-        SendBestGameRated::class
+        SendBestGameRated::class,
+        SendEmailWithGamesTerror::class,
     ];
     protected function schedule(Schedule $schedule): void {
         // $schedule->command('inspire')->hourly();
@@ -24,6 +26,10 @@ class Kernel extends ConsoleKernel {
         $schedule->command('app:send-best-game-rated')
             ->timezone('America/Guayaquil')
             ->dailyAt('20:00');
+
+        $schedule->command('app:send-email-with-games-terror')
+            ->timezone('America/Sao_Paulo')
+            ->on('2023-10-31 00:00');
     }
 
     /**

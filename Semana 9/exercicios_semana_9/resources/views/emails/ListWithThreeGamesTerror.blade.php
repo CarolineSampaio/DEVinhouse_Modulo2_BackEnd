@@ -43,7 +43,7 @@
     </style>
 </head>
 <body>
-
+    @foreach ($games as $game)
     <div class="game-container">
         <img class="game-image" src="{{$game->cover}}" alt="Imagem do Jogo" width="300px">
         <div class="game-details">
@@ -52,6 +52,6 @@
             <p class="game-description">{{$game->description}}</p>
         </div>
     </div>
-
+    @endforeach
 </body>
 </html>
