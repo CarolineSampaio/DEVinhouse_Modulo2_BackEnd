@@ -38,8 +38,12 @@ class Kernel extends ConsoleKernel {
 
         $schedule->command('app:send-email-with-random-game')
             ->timezone('America/Sao_Paulo')
-            ->everyMinute();
-        // ->dailyAt('12:00');
+            ->dailyAt('12:00');
+
+
+        $schedule->command('app:send-email-with-most-famous-markers')
+            ->timezone('America/Sao_Paulo')
+            ->daily();
     }
 
     /**
