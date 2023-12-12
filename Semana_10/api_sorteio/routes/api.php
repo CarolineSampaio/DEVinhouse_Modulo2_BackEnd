@@ -5,3 +5,4 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
 Route::post('clients', [ClientController::class, 'store']);
+Route::get('clients', [ClientController::class, 'index']);
